@@ -164,8 +164,6 @@
 				D4495B8120DE467600BFEDE5 /* TSLaunch.podspec */,
 				D4495B4520DCF49600BFEDE5 /* AppDelegate.swift */,
 				D4495B4720DCF49600BFEDE5 /* ViewController.swift */,
-				D4495B7420DCF5A700BFEDE5 /* TSAdvertViewController.swift */,
-				D4495B7B20DD177800BFEDE5 /* TSAdvertView.swift */,
 				D4495B7F20DE452B00BFEDE5 /* New Group */,
 				D4495B4920DCF49600BFEDE5 /* Main.storyboard */,
 				D4495B4C20DCF49700BFEDE5 /* Assets.xcassets */,
@@ -213,6 +211,8 @@
 			children = (
 				D4495B7320DCF5A700BFEDE5 /* TSLaunchContainerController.swift */,
 				D4495B7D20DDE9DE00BFEDE5 /* TSLaunchConfig.swift */,
+				D4495B7420DCF5A700BFEDE5 /* TSAdvertViewController.swift */,
+				D4495B7B20DD177800BFEDE5 /* TSAdvertView.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
