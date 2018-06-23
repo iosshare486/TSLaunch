@@ -21,6 +21,7 @@
 		D4495B7620DCF5A700BFEDE5 /* TSAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4495B7420DCF5A700BFEDE5 /* TSAdvertViewController.swift */; };
 		D4495B7C20DD177800BFEDE5 /* TSAdvertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4495B7B20DD177800BFEDE5 /* TSAdvertView.swift */; };
 		D4495B7E20DDE9DE00BFEDE5 /* TSLaunchConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4495B7D20DDE9DE00BFEDE5 /* TSLaunchConfig.swift */; };
+		D4495B8220DE467600BFEDE5 /* TSLaunch.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D4495B8120DE467600BFEDE5 /* TSLaunch.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		D4495B7420DCF5A700BFEDE5 /* TSAdvertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSAdvertViewController.swift; sourceTree = "<group>"; };
 		D4495B7B20DD177800BFEDE5 /* TSAdvertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSAdvertView.swift; sourceTree = "<group>"; };
 		D4495B7D20DDE9DE00BFEDE5 /* TSLaunchConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLaunchConfig.swift; sourceTree = "<group>"; };
+		D4495B8120DE467600BFEDE5 /* TSLaunch.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSLaunch.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,10 +160,10 @@
 		D4495B4420DCF49600BFEDE5 /* TSLaunch */ = {
 			isa = PBXGroup;
 			children = (
+				D4495B8320DE471000BFEDE5 /* Public */,
+				D4495B8120DE467600BFEDE5 /* TSLaunch.podspec */,
 				D4495B4520DCF49600BFEDE5 /* AppDelegate.swift */,
 				D4495B4720DCF49600BFEDE5 /* ViewController.swift */,
-				D4495B7320DCF5A700BFEDE5 /* TSLaunchContainerController.swift */,
-				D4495B7D20DDE9DE00BFEDE5 /* TSLaunchConfig.swift */,
 				D4495B7420DCF5A700BFEDE5 /* TSAdvertViewController.swift */,
 				D4495B7B20DD177800BFEDE5 /* TSAdvertView.swift */,
 				D4495B7F20DE452B00BFEDE5 /* New Group */,
@@ -204,6 +206,15 @@
 			children = (
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		D4495B8320DE471000BFEDE5 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				D4495B7320DCF5A700BFEDE5 /* TSLaunchContainerController.swift */,
+				D4495B7D20DDE9DE00BFEDE5 /* TSLaunchConfig.swift */,
+			);
+			path = Public;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +333,7 @@
 			files = (
 				D4495B5020DCF49700BFEDE5 /* LaunchScreen.storyboard in Resources */,
 				D4495B4D20DCF49700BFEDE5 /* Assets.xcassets in Resources */,
+				D4495B8220DE467600BFEDE5 /* TSLaunch.podspec in Resources */,
 				D4495B4B20DCF49600BFEDE5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
