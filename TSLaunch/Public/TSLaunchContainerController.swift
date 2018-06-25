@@ -11,7 +11,7 @@ import TSUtility
 
 public class TSLaunchContainerController: UIViewController {
 
-    let config = TSLaunchConfig()
+    public let config = TSLaunchConfig()
     
     //主控制器
     private var mainController: UIViewController!
