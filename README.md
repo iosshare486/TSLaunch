@@ -44,6 +44,11 @@
     设置广告页显示时间
     */
     public func setAdvertTime(time: Int) -> Void
+    
+    /**
+    活动点击事件，主要需要有活动图片才能出发点击
+    */
+    public var tapLaunchBlock: (() -> Void)?
 
 ###举例
 
