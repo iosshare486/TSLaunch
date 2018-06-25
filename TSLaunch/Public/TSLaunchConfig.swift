@@ -65,7 +65,7 @@ public class TSLaunchConfig {
     /**
      获取应用根控制器
      */
-    public func getMainViewController() -> UIViewController {
+    func getMainViewController() -> UIViewController {
         
         return self.mainViewController
     }

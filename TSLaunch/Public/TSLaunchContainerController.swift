@@ -9,7 +9,7 @@
 import UIKit
 import TSUtility
 
-class TSLaunchContainerController: UIViewController {
+public class TSLaunchContainerController: UIViewController {
 
     let config = TSLaunchConfig()
     
@@ -19,9 +19,9 @@ class TSLaunchContainerController: UIViewController {
     //广告页控制器
     private var advertViewController: TSAdvertViewController!
     
-    var enterViewController: UIViewController?
+    private var enterViewController: UIViewController?
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         self.addChildViews()
@@ -55,7 +55,7 @@ class TSLaunchContainerController: UIViewController {
         }
     }
 
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
