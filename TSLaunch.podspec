@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name         = "TSLaunch"
-s.version      = "1.0.2"
+s.version      = "1.0.3"
 s.summary      = "this is app Launch"
 s.description  = <<-DESC
 这是启动结构，可以用于广告页和根控制器之间的切换

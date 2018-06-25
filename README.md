@@ -27,22 +27,27 @@
      */
     public func setMainViewController(_ vc: UIViewController) -> Void 
     
-    /**
+     /**
      获取应用根控制器
      */
-    public func getMainViewController() -> UIViewController 
+    public func getMainViewController() -> UIViewController {
+        
+        return self.mainViewController
+    }
     
     /**
-     获取广告控制器
-     */
-    func getAdvertViewController() -> TSAdvertViewController 
-    
-    //设置广告图片
+    设置广告图片
+    */
     public func setAdvertUrl(url: String) -> Void 
+    
+    /**
+    设置广告页显示时间
+    */
+    public func setAdvertTime(time: Int) -> Void
 
 ###举例
 
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+      func application(_ application: UIApplication,    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
