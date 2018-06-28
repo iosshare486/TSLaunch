@@ -29,11 +29,8 @@ public class TSAdvertView: UIView {
     //GCD定时器
     var timer: DispatchSourceTimer!
     
-    //内容区域回调
-    var tapContnetBlock: (()->Void)?
-    
-    //倒计时按钮回调
-    var tapTimeCountBlock: (() -> Void)?
+    //跳转区域回调
+    var jumpBlock: ((Bool)->Void)?
     
     deinit {
         
@@ -64,23 +61,7 @@ public class TSAdvertView: UIView {
      */
         func setAdvertImage(imageStr: String?) -> Void {
     
-//            if let url = imageStr, url.count > 1 {
-//
-//                contentImageView.setImage(url: url)
-//                startGCDTimer()
-//
-//            } else {
-//
-//                contentImageView.setImage(url: TTUserInfo.shared.advertDefaultImageUrl, placeHolder: self.contentImageView.image)
-//                countDownButton.isHidden = true
-//                contentImageView.isUserInteractionEnabled = false
-//
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-//
-////                    self.disMiss()
-//                }
-//            }
-    
+
             if let url = imageStr, url.count > 1 {
                 
                 contentImageView.setImage(url: url, placeHolder: self.contentImageView.image ?? UIImage())
@@ -88,9 +69,7 @@ public class TSAdvertView: UIView {
                 
                 self.countDownButton.isHidden = false
                 self.contentImageView.isUserInteractionEnabled = true
-                
             }
-    
         }
     
     /**
@@ -136,12 +115,12 @@ public class TSAdvertView: UIView {
 //
 //            self.removeFromSuperview()
 //        }
-        self.tapTimeCountBlock?()
+        self.self.jumpBlock?(false)
     }
     
     @objc func tapClick(gr: UIGestureRecognizer) -> Void {
         
-        self.tapContnetBlock?()
+        self.jumpBlock?(true)
 //        NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: TS_showAdvertNotification)))
 //        removeFromSuperview()
     }
@@ -211,13 +190,8 @@ extension TSAdvertView {
         
         addSubview(contentImageView)
         
-        contentImageView.snp.makeConstraints({ (make) in
-            
-            make.top.bottom.left.right.equalToSuperview()
-        })
-        
         iconImageView = UIImageView.init()
-//        iconImageView.image = #imageLiteral(resourceName: "defaultLaunch")
+        //        iconImageView.image = #imageLiteral(resourceName: "defaultLaunch")
         let placeholderTop = UITapGestureRecognizer.init(target: self, action: #selector(tapClick(gr:)))
         iconImageView.addGestureRecognizer(placeholderTop)
         addSubview(iconImageView)
@@ -225,9 +199,15 @@ extension TSAdvertView {
         iconImageView.snp.makeConstraints { (make) in
             
             make.left.right.equalToSuperview()
-            make.bottom.equalToSuperview().offset(UIDevice().ts.isIPhoneX ? -34 : 0)
+            make.bottom.equalToSuperview().offset(UIDevice().ts.isIPhoneX ? -30 : 0)
             make.height.equalTo(90.ts.scale())
         }
+        
+        contentImageView.snp.makeConstraints({ (make) in
+            
+            make.top.left.right.equalToSuperview()
+            make.bottom.equalTo(iconImageView)
+        })
         
         countDownButton = UIButton.init(type: UIButtonType.custom)
         countDownButton.titleLabel?.font = 14.ts.font()

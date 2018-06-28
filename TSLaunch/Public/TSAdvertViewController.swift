@@ -14,7 +14,7 @@ class TSAdvertViewController: UIViewController {
 
     var advertView = TSAdvertView()
     
-    var advertTapClick: (() -> Void)?
+    var advertTapClick: ((Bool) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +39,7 @@ extension TSAdvertViewController {
             make.edges.equalToSuperview()
         })
         
-        advertView.tapContnetBlock = advertTapClick
-        advertView.tapTimeCountBlock = advertTapClick
+        advertView.jumpBlock = advertTapClick
     }
 }
 

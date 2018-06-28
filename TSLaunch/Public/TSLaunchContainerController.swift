@@ -69,11 +69,14 @@ extension TSLaunchContainerController {
         
         advertViewController = config.getAdvertViewController()
         
-        advertViewController.advertTapClick = {
+        advertViewController.advertTapClick = { (isTap) in
             
             self.switchViewController(from: self.advertViewController, to: self.mainController)
             
-            self.config.tapLaunchBlock?()
+            if self.config.isAdvertShowing && isTap {
+                
+                self.config.tapLaunchBlock?()
+            }
         }
         addChildViewController(advertViewController)
         advertViewController.didMove(toParentViewController: self)
