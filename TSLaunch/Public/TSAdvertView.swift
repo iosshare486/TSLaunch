@@ -115,7 +115,9 @@ public class TSAdvertView: UIView {
 //
 //            self.removeFromSuperview()
 //        }
-        self.self.jumpBlock?(false)
+        self.jumpBlock?(false)
+        self.timer.cancel()
+        self.timer = nil
     }
     
     @objc func tapClick(gr: UIGestureRecognizer) -> Void {
