@@ -24,8 +24,8 @@ s.framework  = "UIKit","Foundation"
 s.swift_version = '4.0'
 s.requires_arc = true
 
-s.dependency 'Kingfisher'
-s.dependency 'SnapKit'
 s.dependency 'TSUtility'
+s.dependency 'Kingfisher', '~> 4.8.1'
+s.dependency 'SnapKit', '~> 4.0.0'
 
 end
