@@ -164,7 +164,6 @@
 				D4495B8120DE467600BFEDE5 /* TSLaunch.podspec */,
 				D4495B4520DCF49600BFEDE5 /* AppDelegate.swift */,
 				D4495B4720DCF49600BFEDE5 /* ViewController.swift */,
-				D4495B7F20DE452B00BFEDE5 /* New Group */,
 				D4495B4920DCF49600BFEDE5 /* Main.storyboard */,
 				D4495B4C20DCF49700BFEDE5 /* Assets.xcassets */,
 				D4495B4E20DCF49700BFEDE5 /* LaunchScreen.storyboard */,
@@ -191,21 +190,6 @@
 			path = TSLaunchUITests;
 			sourceTree = "<group>";
 		};
-		D4495B7F20DE452B00BFEDE5 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				D4495B8020DE453000BFEDE5 /* New Group */,
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		D4495B8020DE453000BFEDE5 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		D4495B8320DE471000BFEDE5 /* Public */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,7 +213,6 @@
 				D4495B3F20DCF49600BFEDE5 /* Frameworks */,
 				D4495B4020DCF49600BFEDE5 /* Resources */,
 				994BAF1DD19CEB6A1843AF84 /* [CP] Embed Pods Frameworks */,
-				43F568A97FB9E01F7095BDCC /* [CP] Copy Pods Resources */,
 				D4495B7A20DCF7FD00BFEDE5 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -249,8 +232,6 @@
 				D4495B5220DCF49700BFEDE5 /* Sources */,
 				D4495B5320DCF49700BFEDE5 /* Frameworks */,
 				D4495B5420DCF49700BFEDE5 /* Resources */,
-				7B321CA6D0ED51F9A415B642 /* [CP] Embed Pods Frameworks */,
-				DA081DEE79347E52AE6AF51F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,8 +251,6 @@
 				D4495B5D20DCF49700BFEDE5 /* Sources */,
 				D4495B5E20DCF49700BFEDE5 /* Frameworks */,
 				D4495B5F20DCF49700BFEDE5 /* Resources */,
-				CE341831F18FCDF8F2F6E9E7 /* [CP] Embed Pods Frameworks */,
-				4B099DD4AA0E233465D3F71E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -355,36 +334,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		43F568A97FB9E01F7095BDCC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TSLaunch/Pods-TSLaunch-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4B099DD4AA0E233465D3F71E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TSLaunchUITests/Pods-TSLaunchUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6CF8FC8C7FB0109D2A086EF0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,24 +368,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7B321CA6D0ED51F9A415B642 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TSLaunchTests/Pods-TSLaunchTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TSLaunchTests/Pods-TSLaunchTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		812FBBAC37DEBA624182EEBC /* [CP] Check Pods Manifest.lock */ = {
@@ -477,36 +408,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TSLaunch/Pods-TSLaunch-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE341831F18FCDF8F2F6E9E7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TSLaunchUITests/Pods-TSLaunchUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DA081DEE79347E52AE6AF51F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TSLaunchTests/Pods-TSLaunchTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -696,6 +597,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5SY74Q2CEY;
 				INFOPLIST_FILE = TSLaunch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -703,7 +605,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.caiqiu.TSLaunch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -714,6 +616,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5SY74Q2CEY;
 				INFOPLIST_FILE = TSLaunch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -721,7 +624,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.caiqiu.TSLaunch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

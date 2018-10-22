@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name         = "TSLaunch"
-s.version      = "1.0.7"
+s.version      = "2.0.0"
 s.summary      = "this is app Launch"
 s.description  = <<-DESC
 这是启动结构，可以用于广告页和根控制器之间的切换
@@ -21,11 +21,11 @@ s.author             = { "yuchenH" => "huangyuchen@caiqr.com" }
 s.source       = { :git => "http://gitlab.caiqr.com/ios_module/TSLaunch.git", :tag => s.version }
 s.source_files  = "TSLaunch/Public"
 s.framework  = "UIKit","Foundation"
-s.swift_version = '4.0'
+s.swift_version = '4.2'
 s.requires_arc = true
 
 s.dependency 'TSUtility'
-s.dependency 'Kingfisher', '~> 4.8.1'
-s.dependency 'SnapKit', '~> 4.0.0'
+s.dependency 'Kingfisher'
+s.dependency 'SnapKit'
 
 end

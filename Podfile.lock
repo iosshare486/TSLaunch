@@ -1,18 +1,25 @@
 PODS:
-  - Kingfisher (4.8.0)
-  - SnapKit (4.0.0)
-  - TSUtility (1.0.3)
+  - Kingfisher (4.10.0)
+  - SnapKit (4.0.1)
+  - TSUtility (1.0.6)
 
 DEPENDENCIES:
   - Kingfisher
   - SnapKit
   - TSUtility
 
+SPEC REPOS:
+  http://gitlab.caiqr.com/zhangjunjie/ExchangePodSpecs.git:
+    - TSUtility
+  https://github.com/cocoapods/specs.git:
+    - Kingfisher
+    - SnapKit
+
 SPEC CHECKSUMS:
-  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  TSUtility: e4227ac9d5d2f6f6a629eead65dc628883ced2d0
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  TSUtility: 06df261ebf0398a99d4d96dfd519fd16ef4f3bcb
 
 PODFILE CHECKSUM: aa1e22b2f19d0dcca2a4658564dfaf2404824f52
 
-COCOAPODS: 1.4.0.rc.1
+COCOAPODS: 1.5.2

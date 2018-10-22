@@ -45,7 +45,7 @@ public class TSLaunchContainerController: UIViewController {
     //切换控制器
     func switchViewController(from: UIViewController, to: UIViewController) -> Void {
         
-        transition(from: from, to: to, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
+        transition(from: from, to: to, duration: 0.5, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
             
             TSLog("动画开始执行")
             
@@ -78,8 +78,8 @@ extension TSLaunchContainerController {
                 self.config.tapLaunchBlock?()
             }
         }
-        addChildViewController(advertViewController)
-        advertViewController.didMove(toParentViewController: self)
+        addChild(advertViewController)
+        advertViewController.didMove(toParent: self)
         self.view.addSubview(advertViewController.view)
         
         advertViewController.advertView.setDefultIconImage(image: config.getIconImage())
@@ -87,7 +87,7 @@ extension TSLaunchContainerController {
         
         mainController = config.getMainViewController()
         
-        addChildViewController(mainController)
+        addChild(mainController)
     }
 }
 

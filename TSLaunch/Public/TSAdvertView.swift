@@ -85,7 +85,7 @@ public class TSAdvertView: UIView {
         if let tempTime = time, tempTime >= 2 {
             
             timeCount = tempTime
-            countDownButton.setTitle("跳过 "+"\(self.timeCount)s", for: UIControlState.normal)
+            countDownButton.setTitle("跳过 "+"\(self.timeCount)s", for: UIControl.State.normal)
             
         }
     }
@@ -172,7 +172,7 @@ extension TSAdvertView {
                 
                 DispatchQueue.main.async(execute: {
                     
-                    self.countDownButton.setTitle("跳过 "+"\(self.timeCount)s", for: UIControlState.normal)
+                    self.countDownButton.setTitle("跳过 "+"\(self.timeCount)s", for: UIControl.State.normal)
                 })
             }
         }
@@ -215,12 +215,12 @@ extension TSAdvertView {
             make.bottom.equalTo(iconImageView)
         })
         
-        countDownButton = UIButton.init(type: UIButtonType.custom)
+        countDownButton = UIButton.init(type: UIButton.ButtonType.custom)
         countDownButton.titleLabel?.font = 14.ts.font()
-        countDownButton.setTitle("跳转 3s", for: UIControlState.normal)
+        countDownButton.setTitle("跳转 3s", for: UIControl.State.normal)
         countDownButton.isHidden = true
         //        countDownButton.setBackgroundImage(UIImage.createImage(color: uicolor(rgbValue: 0x000000, alpha: 0.4)), for: UIControlState.normal)
-        countDownButton.addTarget(self, action: #selector(timeCountClick), for: UIControlEvents.touchUpInside)
+        countDownButton.addTarget(self, action: #selector(timeCountClick), for: UIControl.Event.touchUpInside)
         
         addSubview(countDownButton)
         countDownButton.snp.makeConstraints({ (make) in
