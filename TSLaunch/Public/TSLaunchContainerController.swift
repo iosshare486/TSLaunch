@@ -24,12 +24,19 @@ public class TSLaunchContainerController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
 
+        self.enterViewController = config.getEnterViewController()
+        
         self.addChildViews()
         
         self.startGCDTimer()
     }
     
     func startGCDTimer() -> Void {
+        
+        guard self.enterViewController == nil else {
+            
+            return
+        }
         
         DispatchTimer(timeInterval: 1, repeatCount: 2) { (timer, count) in
             
@@ -40,6 +47,16 @@ public class TSLaunchContainerController: UIViewController {
                 self.switchViewController(from: self.advertViewController, to: self.mainController)
             }
         }
+    }
+    
+    public func enterMainVCFromEnterVC() -> Void {
+        
+        guard self.enterViewController != nil else {
+            
+            return
+        }
+        
+        self.switchViewController(from: self.enterViewController!, to: self.mainController)
     }
     
     //切换控制器
@@ -67,23 +84,34 @@ extension TSLaunchContainerController {
     //MARK: ======  控制器添加及设置  ======
     func addChildViews() -> Void {
         
-        advertViewController = config.getAdvertViewController()
-        
-        advertViewController.advertTapClick = { (isTap) in
+        if self.enterViewController == nil {
             
-            self.switchViewController(from: self.advertViewController, to: self.mainController)
+            advertViewController = config.getAdvertViewController()
             
-            if self.config.isAdvertShowing && isTap {
+            advertViewController.advertTapClick = { (isTap) in
                 
-                self.config.tapLaunchBlock?()
+                self.switchViewController(from: self.advertViewController, to: self.mainController)
+                
+                if self.config.isAdvertShowing && isTap {
+                    
+                    self.config.tapLaunchBlock?()
+                }
             }
+            addChild(advertViewController)
+            advertViewController.didMove(toParent: self)
+            self.view.addSubview(advertViewController.view)
+            
+            advertViewController.advertView.setDefultIconImage(image: config.getIconImage())
+            advertViewController.advertView.setDefultLaunchImage(image: config.getLaunchImage())
+            
+            
+        }else{
+            
+            addChild(enterViewController!)
+            enterViewController!.didMove(toParent: self)
+            self.view.addSubview(enterViewController!.view)
+            
         }
-        addChild(advertViewController)
-        advertViewController.didMove(toParent: self)
-        self.view.addSubview(advertViewController.view)
-        
-        advertViewController.advertView.setDefultIconImage(image: config.getIconImage())
-        advertViewController.advertView.setDefultLaunchImage(image: config.getLaunchImage())
         
         mainController = config.getMainViewController()
         
