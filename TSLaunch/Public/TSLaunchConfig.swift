@@ -19,6 +19,7 @@ public class TSLaunchConfig {
     
     private var advertViewController = TSAdvertViewController()
     
+    private var enterViewController: UIViewController?
 
     public var isAdvertShowing = false
     
@@ -97,5 +98,21 @@ public class TSLaunchConfig {
         }
         
         self.advertViewController.advertView.setAdvertDisplayTime(time: time)
+    }
+    
+    /**
+     设置进入控制器
+     */
+    public func setEnterViewController(vc: UIViewController?) -> Void {
+        
+        self.enterViewController = vc
+    }
+    
+    /**
+     获取进入控制器
+     */
+    public func getEnterViewController() -> UIViewController? {
+        
+        return self.enterViewController
     }
 }
