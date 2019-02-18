@@ -13,7 +13,7 @@ s.summary      = "this is app Launch"
 s.description  = <<-DESC
 这是启动结构，可以用于广告页和根控制器之间的切换
 DESC
-s.platform     = :ios, "8.0"
+s.platform     = :ios, "9.0"
 s.homepage     = "https://www.jianshu.com/u/8a7102c0b777"
 s.license      = { :type => "MIT", :file => "LICENSE" }
 s.author             = { "yuchenH" => "huangyuchen@caiqr.com" }
