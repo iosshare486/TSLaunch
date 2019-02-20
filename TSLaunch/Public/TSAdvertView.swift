@@ -211,8 +211,7 @@ extension TSAdvertView {
         
         contentImageView.snp.makeConstraints({ (make) in
             
-            make.top.left.right.equalToSuperview()
-            make.bottom.equalTo(iconImageView)
+            make.edges.equalToSuperview()
         })
         
         countDownButton = UIButton.init(type: UIButton.ButtonType.custom)
